@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>WCAG Testing Checklist</title>
+	<link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+	<div class="wrapper">
+		<form>
+			<div role="search">
+				<label class="search-label" for="search">Search for relevant elements</label>
+				<p id="error" role="alert"></p>
+				<input id="search" class="search_input" type="text">
+				<input id="searchButton" class="button" type="button" value="Search">
+				<input id="showAllButton" class="button" type="button" value="Show All">
+				<label for="criteria-menu">Criterion:</label>
+				<select name="criteria-menu" id="criteria-menu" class="dropdown">
+					<option value="all">All Criteria</option>
+				</select>
+				<div role="radiogroup">
+					<label for="radio-sort_T" class="radioSort">
+						<input type="radio" id="radio-sort_T" name="radio-sort" value=0 checked> 
+						Technique
+					</label>
+					<label for="radio-sort_I" class="radioSort">
+						<input type="radio" id="radio-sort_I" name="radio-sort" value=1>
+						Importance
+					</label>
+				</div>
+			</div>
+		</form>
+	</div>
+	<div class="tables">
+		<div class="col">
+			<table id="checked_table" title="Checked Items" class="styled_table">
+			<caption>All Checked Items</caption>
+			
+			<tr id="colHeadings">
+			<th scope="col">Technique</th>
+			<th scope="col">Importance</th>
+
+			<th scope="col"></th>
+			</tr>
+			
+			</table>
+		</div>
+		<div class="col">
+		
+			<table id="results_table" title="Search Results" class="styled_table">
+			<caption>Applicable WCAG 1.3.1 Techniques</caption>
+			
+			<tr id="colHeadings">
+			<th scope="col">Technique</th>
+			<th scope="col">Importance</th>
+			<th scope="col">Content</th>
+			<th scope="col"></th>
+			</tr>
+			
+			</table>
+		</div>
+	</div>
+	<script src="./script.js"></script>
+  </body>
+</html>
