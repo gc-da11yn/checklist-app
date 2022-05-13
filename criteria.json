@@ -1,0 +1,99 @@
+`[
+	{
+		"id":"1.3.1",
+		"name":"Info and Relationships",
+		"techniques": [
+			{
+			"id":"ARIA11",
+			"cat":"sufficient",
+			"tags":["headings","name regions"],
+			"content":["ARIA landmarks are defined as a role=x attribute and correctly identify regions of a page"]
+			},
+			{
+			"id":"ARIA12",
+			"cat":"advisory",
+			"tags":["banana","apple"],
+			"content":["bloo bloo"]
+			},
+			{
+			"id":"ARIA13",
+			"cat":"advisory",
+			"tags":["orange","mango"],
+			"content":["hee hee"]
+			},
+			{
+			"id":"ARIA16",
+			"cat":"sufficient",
+			"tags":["papaya","pear"],
+			"content":["blah blah"]
+			},
+			{
+			"id":"ARIA15",
+			"cat":"advisory",
+			"tags":["strawberry","blueberry"],
+			"content":["mlop mlop"]
+			},
+			{
+			"id":"G141",
+			"cat":"sufficient",
+			"tags":["pineapple","apple"],
+			"content":["beh beh", 
+						["cha cha", 
+							["cah cah", 
+							"bei bei"], 
+						"buh buh"],
+						"heh heh"]
+			},
+			{
+			"id":"G142",
+			"cat":"advisory",
+			"tags":["orange","mango", "banana"],
+			"content":["mreugh mreugh"]
+			},
+			{
+			"id":"G143",
+			"cat":"sufficient",
+			"tags":["papaya","pear", "mango"],
+			"content":["hoo hoo"]
+			},
+			{
+			"id":"G144",
+			"cat":"sufficient",
+			"tags":["strawberry","blueberry", "coconut"],
+			"content":["kee kee"]
+			},
+			{
+			"id":"H39",
+			"cat":"sufficient",
+			"tags":["Data Tables", "Layout Tables", "Tables"],
+			"content":["Data Tables",
+						["Verify that captions are present and applied to data tables via <caption> tags"],
+					"Layout Tables",
+						["Verify that the table contains no caption element",
+						"Verify that if the table has a <summary> element, it is not empty"]]
+			},
+			{
+			"id":"H42",
+			"cat":"sufficient",
+			"tags":["Headings", "Order", "Heading Order"],
+			"content":["Check that Headings are Correctly Applied",
+						["Verify that headings are created using an <hx> tag where x is the appropriate heading level from 1 to 6",
+						"Verify that <hx> tags are only used for headings"]]
+			}
+		]
+	},
+	{
+		"id":"4.1.2",
+		"name":"Name, Role, Value",
+		"techniques": [
+			{
+			"id":"ARIA14",
+			"cat":"sufficient",
+			"tags":["peach","apple", "pear"],
+			"content":["This is just",
+						["a test technique for 4.2.1",
+						"also meaningless"]]
+			}
+		]
+	}
+]`
