@@ -19,7 +19,7 @@ fetch('criteria.json')
 console.log(techniques_json)
 let raw_criteria = techniques_json
 console.log(raw_criteria)
-let current_criterion = undefined
+let current_criterion = "all"
 let raw_current_techniques;
 
 
@@ -176,8 +176,11 @@ let searchTag = (kw='*', sortval=0) => {
 			newTr.append(newTh, newTd1, newTd2, newTd3)
 			console.log(newTr)
 			table.appendChild(newTr)
+
 		}
 	}
+
+	updateTables()
 }
 
 let clearTables = () => {
@@ -244,13 +247,14 @@ let updateTables = () => {
 			} else if (chkBtn.textContent == "Mark Incomplete") markIncomplete(technique.id)
 		})
 
-
 		newTd3.append(chkBtn)
-
 
 		newTr.append(newTh, newTd1, newTd3)
 		console.log(newTr)
-		checked_table.appendChild(newTr)
+		console.log(`TID: ${technique.id}, CCRIT: ${current_criterion}`)
+		if (!Array.isArray(technique.appCrits)) technique.appCrits = [technique.appCrits]
+		if ((checkedApp === "applicable" && technique.appCrits.includes(current_criterion)) || checkedApp === "all" || current_criterion === "all")
+			checked_table.appendChild(newTr)
 	})
 
 	techniques.forEach( (technique) => {
@@ -375,6 +379,7 @@ let markIncomplete = (t) => {
 	for (let i = 0; i < checked_techniques.length; i++) {
 		if (checked_techniques[i].id === t) {
 			if (!techniques.includes(checked_techniques[i]))
+				if (!Array.isArray(technique.appCrits)) technique.appCrits = [technique.appCrits]
 				if (checked_techniques[i].appCrits.includes(current_criterion))
 					raw_current_techniques.push(checked_techniques[i])
 			checked_techniques.splice(i,1)
@@ -394,6 +399,14 @@ let technique_radio = document.getElementById('radio-sort_T');
 let importance_radio = document.getElementById('radio-sort_I');
 let crit_dropdown = document.getElementById('criteria-menu');
 let current_search = '*'
+let checked_dropdown = document.getElementById('checked-menu');
+let checkedApp = "all"
+
+checked_dropdown.addEventListener('change', (event) => {
+	event.preventDefault()
+	checkedApp = checked_dropdown.value
+	updateTables()
+})
 
 let populateDropdown = () => {
 	raw_criteria.forEach( (crit) => {

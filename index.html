@@ -15,10 +15,12 @@
 				<input id="search" class="search_input" type="text">
 				<input id="searchButton" class="button" type="button" value="Search">
 				<input id="showAllButton" class="button" type="button" value="Show All">
-				<label for="criteria-menu">Criterion:</label>
-				<select name="criteria-menu" id="criteria-menu" class="dropdown">
-					<option value="all">All Criteria</option>
-				</select>
+				<div>
+					<label for="criteria-menu">Criterion:</label>
+					<select name="criteria-menu" id="criteria-menu" class="dropdown">
+						<option value="all">All Criteria</option>
+					</select>
+				</div>
 				<div role="radiogroup">
 					<label for="radio-sort_T" class="radioSort">
 						<input type="radio" id="radio-sort_T" name="radio-sort" value=0 checked> 
@@ -35,9 +37,15 @@
 	<div class="tables">
 		<div class="col">
 			<table id="checked_table" title="Checked Items" class="styled_table">
-			<caption>All Checked Items</caption>
+			<caption>
+				<label for="checked-menu">Checked Items: </label>
+				<select name="checked-menu" id="checked-menu" class="dropdown">
+					<option value="all">All</option>
+					<option value="applicable">Applicable</option>
+				</select>
+			</caption>
 			
-			<tr id="colHeadings">
+			<tr id="colHeadings0">
 			<th scope="col">Technique</th>
 			<th scope="col">Importance</th>
 
@@ -51,7 +59,7 @@
 			<table id="results_table" title="Search Results" class="styled_table">
 			<caption>Applicable WCAG 1.3.1 Techniques</caption>
 			
-			<tr id="colHeadings">
+			<tr id="colHeadings1">
 			<th scope="col">Technique</th>
 			<th scope="col">Importance</th>
 			<th scope="col">Content</th>
