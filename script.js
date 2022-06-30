@@ -379,7 +379,7 @@ let markIncomplete = (t) => {
 	for (let i = 0; i < checked_techniques.length; i++) {
 		if (checked_techniques[i].id === t) {
 			if (!techniques.includes(checked_techniques[i]))
-				if (!Array.isArray(technique.appCrits)) technique.appCrits = [technique.appCrits]
+				if (!Array.isArray(t.appCrits)) t.appCrits = [t.appCrits]
 				if (checked_techniques[i].appCrits.includes(current_criterion))
 					raw_current_techniques.push(checked_techniques[i])
 			checked_techniques.splice(i,1)
@@ -419,7 +419,7 @@ let populateDropdown = () => {
 
 
 
-crit_dropdown.addEventListener('change', (event) => dropdownUpdate(searchTag))
+crit_dropdown.addEventListener('change', () => dropdownUpdate(searchTag))
 
 function dropdownUpdate(searchTagCB) {
 	console.log(crit_dropdown.value)

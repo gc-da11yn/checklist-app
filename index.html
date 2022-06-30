@@ -35,29 +35,11 @@
 		</form>
 	</div>
 	<div class="tables">
-		<div class="col">
-			<table id="checked_table" title="Checked Items" class="styled_table">
-			<caption>
-				<label for="checked-menu">Checked Items: </label>
-				<select name="checked-menu" id="checked-menu" class="dropdown">
-					<option value="all">All</option>
-					<option value="applicable">Applicable</option>
-				</select>
-			</caption>
-			
-			<tr id="colHeadings0">
-			<th scope="col">Technique</th>
-			<th scope="col">Importance</th>
 
-			<th scope="col"></th>
-			</tr>
-			
-			</table>
-		</div>
 		<div class="col">
-		
+
 			<table id="results_table" title="Search Results" class="styled_table">
-			<caption>Applicable WCAG 1.3.1 Techniques</caption>
+			<caption class="capt">Applicable WCAG 1.3.1 Techniques</caption>
 			
 			<tr id="colHeadings1">
 			<th scope="col">Technique</th>
@@ -66,6 +48,25 @@
 			<th scope="col"></th>
 			</tr>
 			
+			</table>
+		</div>
+		<div class="col">
+			<table id="checked_table" title="Checked Items" class="styled_table">
+				<caption class="capt">
+					<label for="checked-menu">Checked Items: </label>
+					<select name="checked-menu" id="checked-menu" class="dropdown">
+						<option value="all">All</option>
+						<option value="applicable">Applicable</option>
+					</select>
+				</caption>
+
+				<tr id="colHeadings0">
+					<th scope="col">Technique</th>
+					<th scope="col">Importance</th>
+
+					<th scope="col"></th>
+				</tr>
+
 			</table>
 		</div>
 	</div>
